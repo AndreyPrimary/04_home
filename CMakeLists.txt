@@ -24,7 +24,7 @@ set_target_properties(${PROGRAM_NAME} ${PROGRAM_NAME}_lib test_version PROPERTIE
 )
 target_include_directories(${PROGRAM_NAME}_lib
     PRIVATE "${CMAKE_BINARY_DIR}"
-)
+ )
 set_target_properties(test_version PROPERTIES
     COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
     INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
@@ -32,7 +32,7 @@ set_target_properties(test_version PROPERTIES
 
 target_link_libraries(${PROGRAM_NAME} PRIVATE
     ${PROGRAM_NAME}_lib
-)
+ )
 target_link_libraries(test_version
     ${Boost_LIBRARIES}
     ${PROGRAM_NAME}_lib
