@@ -65,7 +65,7 @@ public:
     }
 
     ~UIForm() {
-        delete document.get();
+
     }
 
     void draw()
