@@ -124,30 +124,35 @@ public:
 class Serializer : public Basic_Serializer
 {
 public:
-    Serializer() = default;
+    Serializer(std::string storageName) : storageName(storageName) {
+
+    }
+
     ~Serializer() = default;
 
     void serialize(draw_basic* data) {
         if (auto line = dynamic_cast<draw_line*>(data)) {
-            serialize(*line);
+            serialize(line);
         } else if (auto circle = dynamic_cast<draw_circle*>(data)) {
-            serialize(*circle);
+            serialize(circle);
         } else if (auto rectangle = dynamic_cast<draw_rectangle*>(data)) {
-            serialize(*rectangle);
+            serialize(rectangle);
         } else {
             throw std::logic_error{"Unknown draw object"};
         }
     }
 private:
-    void serialize (const point &data) {
+    std::string storageName;
+
+    void serialize ( [[maybe_unused]] const point &data) {
         // ....
     }
 
-    void serialize (const dist &data) {
+    void serialize ( [[maybe_unused]] const dist &data) {
         // ....
     }
 
-    void serialize (const std::string &primitive_name) {
+    void serialize ( [[maybe_unused]] const std::string &primitive_name) {
         // ....
     }
 
@@ -185,11 +190,22 @@ public:
 class Unserializer : public Basic_Unserializer
 {
 public:
-    Unserializer() = default;
+    Unserializer(std::string storageName) : storageName(storageName) {
+
+    }
+
     ~Unserializer() = default;
 
-    draw_basic* unserialize(draw_basic* data) {
+    bool isEOF() {
+        bool endOfFile = true;
+        // ....
+        return endOfFile;
+    }
+
+    draw_basic* unserialize() {
         std::string primitive_name = unserialize_name();
+
+        draw_basic* data;
 
         if (primitive_name == "line") {
             data = unserialize_line();
@@ -200,18 +216,34 @@ public:
         } else {
             throw std::logic_error{"Unknown draw object"};
         }
+
+        return data;
     }
 private:
+    std::string storageName;
+
     point unserialize_point () {
+        point data;
+        data.X = 0;
+        data.Y = 0;
         // ....
+        return data;
     }
 
     dist unserialize_dist () {
+        dist data;
+        data.A.X = 0;
+        data.A.Y = 0;
+        data.B.X = 0;
+        data.B.Y = 0;
         // ....
+        return data;
     }
 
     std::string unserialize_name () {
+        std::string data = "";
         // ....
+        return data;
     }
 
     draw_line* unserialize_line () {
