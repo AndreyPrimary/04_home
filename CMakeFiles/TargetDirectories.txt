@@ -1,0 +1,12 @@
+/home/runner/work/04_home/04_home/CMakeFiles/install/local.dir
+/home/runner/work/04_home/04_home/CMakeFiles/test_version.dir
+/home/runner/work/04_home/04_home/CMakeFiles/package.dir
+/home/runner/work/04_home/04_home/CMakeFiles/test.dir
+/home/runner/work/04_home/04_home/CMakeFiles/painter.dir
+/home/runner/work/04_home/04_home/CMakeFiles/rebuild_cache.dir
+/home/runner/work/04_home/04_home/CMakeFiles/package_source.dir
+/home/runner/work/04_home/04_home/CMakeFiles/edit_cache.dir
+/home/runner/work/04_home/04_home/CMakeFiles/install/strip.dir
+/home/runner/work/04_home/04_home/CMakeFiles/list_install_components.dir
+/home/runner/work/04_home/04_home/CMakeFiles/painter_lib.dir
+/home/runner/work/04_home/04_home/CMakeFiles/install.dir

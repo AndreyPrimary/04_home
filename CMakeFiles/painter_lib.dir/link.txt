@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpainter_lib.a CMakeFiles/painter_lib.dir/src/lib.cpp.o
+/usr/bin/ranlib libpainter_lib.a

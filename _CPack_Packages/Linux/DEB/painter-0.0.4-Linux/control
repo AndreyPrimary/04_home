@@ -1,0 +1,9 @@
+Architecture: amd64
+Description: painter built using CMake
+Maintainer: example@example.com
+Package: painter
+Priority: optional
+Section: devel
+Version: 0.0.4
+Installed-Size: 99
+

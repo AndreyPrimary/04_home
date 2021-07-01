@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/painter.dir/src/main.cpp.o CMakeFiles/painter.dir/src/draw_figures.cpp.o CMakeFiles/painter.dir/src/doc_handler.cpp.o -o painter  libpainter_lib.a 
